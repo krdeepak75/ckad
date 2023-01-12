@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: busybox2
+  name: multipod
   namespace: default
 spec:
   containers:
@@ -9,4 +9,6 @@ spec:
     image: busybox
     command:
       - sleep
-      - "3600" 
+      - "300"
+  - name: nginx
+    image: nginx
